@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="goal_catergories">
+        <item>Family/Relationship</item>
+        <item>Education</item>
+        <item>Health and body</item>
+        <item>Mental development</item>
+        <item>Professional development</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="goal_frequency">
+        <item>Every Monday</item>
+        <item>Every Tuesday</item>
+        <item>Every Wednesday</item>
+        <item>Every Thursday</item>
+        <item>Every Friday</item>
+        <item>Every Saturday</item>
+        <item>Every Sunday</item>
+        <item>Every day</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+
+</resources>

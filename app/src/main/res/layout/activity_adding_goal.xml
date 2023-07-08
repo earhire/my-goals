@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBFCFB"
+    tools:context=".AddingGoalActivity">
+
+    <TextView
+        android:id="@+id/tv_adding_goal_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="New Goal"
+        android:textColor="@color/teal_700"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_adding_goal_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detailsTitleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_add_goal_upload" />
+
+            <ImageView
+                android:id="@+id/img_add_goal_upload"
+                android:layout_width="92dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/image_border"
+                android:padding="1dp"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/icon_upload_photo" />
+
+
+            <EditText
+                android:id="@+id/et_add_goal_title_det"
+                android:layout_width="324dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailsTitleLabel" />
+
+            <Spinner
+                android:id="@+id/spinner_add_goal_categories"
+                android:layout_width="188dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="8dp"
+                android:dropDownWidth="wrap_content"
+                android:entries="@array/goal_catergories"
+                android:spinnerMode="dropdown"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.629"
+                app:layout_constraintStart_toEndOf="@+id/goal_category_title"
+                app:layout_constraintTop_toBottomOf="@+id/et_add_goal_title_det"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/goal_category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Category:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_add_goal_title_det" />
+
+            <TextView
+                android:id="@+id/detailsDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Positive affects of the goal:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goal_category_title" />
+
+            <EditText
+                android:id="@+id/ed_add_goal_description"
+                android:layout_width="321dp"
+                android:layout_height="74dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="5dp"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailsDescriptionLabel" />
+
+            <TextView
+                android:id="@+id/tv_add_goal_start_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Start date:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ed_add_goal_description" />
+
+            <EditText
+                android:id="@+id/ed_add_goal_start_det"
+                android:layout_width="154dp"
+                android:layout_height="43dp"
+                android:inputType="date"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.136"
+                app:layout_constraintStart_toEndOf="@+id/tv_add_goal_start_label"
+                app:layout_constraintTop_toBottomOf="@+id/ed_add_goal_description" />
+
+            <TextView
+                android:id="@+id/tv_add_goal_end_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="End date:"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_add_goal_start_label" />
+
+            <EditText
+                android:id="@+id/ed_add_goal_end_det"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.092"
+                app:layout_constraintStart_toEndOf="@+id/tv_add_goal_end_label"
+                app:layout_constraintTop_toBottomOf="@+id/ed_add_goal_start_det" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image upload:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_add_goal_go_back"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Go back"
+        app:layout_constraintTop_toBottomOf="@+id/bt_add_goal_submit"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/bt_add_goal_submit"
+        android:layout_width="304dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="54dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
